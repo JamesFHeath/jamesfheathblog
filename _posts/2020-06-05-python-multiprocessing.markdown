@@ -35,7 +35,7 @@ with multiprocessing.Pool(num_processes) as pool:
         params = []
         for data in data_to_process:
             params.append(data, other_args)
-        for result1, result2 in pool.starmap(f, params):
+        for result1, result2 in pool.starmap(my_function, params):
             operate_on_results(result1, result2)
 
 {% endhighlight %}
