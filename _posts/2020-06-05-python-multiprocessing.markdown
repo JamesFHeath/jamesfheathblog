@@ -34,7 +34,7 @@ num_processes = 7
 with multiprocessing.Pool(num_processes) as pool:
         params = []
         for data in data_to_process:
-            params.append(data, other_args)
+            params.append((data, other_args)) # Tuple of args here
         for result1, result2 in pool.starmap(my_function, params):
             operate_on_results(result1, result2)
 
