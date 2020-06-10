@@ -21,19 +21,17 @@ Mario appeared on the NES, but my experience with Mario mostly involved the SNES
 The SNES has 4 face buttons, a control pad, 2 shoulder buttons, and a start and a select button. 
 This introduced me to the importance of hand position and optimization of button presses. 
 
-1. Learn the Controller and Controls
+1. Learn the Controller and Controls<br>
 Spend some time learning the name and position of the buttons on your controller. 
 This is simply memorization, and just takes concious effort. 
 Additonally, learn the specific controls for the game you are playing. 
 This seems obvious, but you need to take the time to connect your brain and hands to actions in the game.
-
-2. Hold "Y" in Mario!
+2. Hold "Y" in Mario!<br>
 This is completely second nature to me at this point, but non obvious to beginners. 
 Holding "Y" makes your character run, but it also performs actions like fireball and pick up item.
 This is a strange hand position, because you are using the tip of your thumb to hold the "Y" button, and the joint of your thumb to press the "B" button to jump. 
 The rationale for this is that holding "Y" to run makes you go faster, and it also feeds in to the next tip...
-
-3. Keep your fingers close to the buttons!
+3. Keep your fingers close to the buttons!<br>
 This is another tactic I take for granted, but I noticed my girlfriend held her fingers away from the controller and jabbed at the keys. 
 Jabbing at the keys is imprecise and slow, causing input errors and delayed reactions
 

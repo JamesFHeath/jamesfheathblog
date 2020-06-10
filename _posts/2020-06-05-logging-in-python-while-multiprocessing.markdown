@@ -2,7 +2,7 @@
 layout: post
 title:  "Logging in Python while Multiprocessing"
 date:   2020-06-06 12:32:00 -0400
-category: python
+categories: python programming
 tags: python multiprocessing logging
 ---
 

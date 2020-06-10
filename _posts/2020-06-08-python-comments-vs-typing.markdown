@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Python: Comments vs Type Annotations"
-categories: python 
+categories: python programming 
 date: 2020-06-08
 tags: python
 ---

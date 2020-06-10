@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Python
+title: Programming
 pagination: 
   enabled: true
-  category: python
+  category: programming
 ---

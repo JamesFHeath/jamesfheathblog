@@ -2,7 +2,7 @@
 layout: post
 title:  "Python Multiprocessing Primer"
 date:   2020-06-05 18:36:08 -0400
-categories: python
+categories: python programming
 tags: python multiprocessing 
 ---
 
