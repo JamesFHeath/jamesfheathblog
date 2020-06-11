@@ -24,20 +24,17 @@ If the game is directing you in a certain geographic direction, it's often worth
 Especially if you are struggling to defeat stronger enemies, taking a detour to obtain items is often an optimal strategy. 
 
 ### Example Games
-1. Final Fantasy series
-
+1. Final Fantasy series<br>
 [Final Fantasy](https://en.wikipedia.org/wiki/Final_Fantasy) is a series of Japanese RPG games (JRPGs) dating back to 1987. 
 Along with other series like [Dragon Quest](https://en.wikipedia.org/wiki/Dragon_Quest), defined the JRPG genre. 
 Starting with Final Fantasy 7, 9 or 10 will let you know if you enjoy these games. 
 
-2. Mass Effect trilogy
-
+2. Mass Effect trilogy<br>
 The [Mass Effect trilogy](https://en.wikipedia.org/wiki/Mass_Effect#Mass_Effect_Trilogy) is a science fiction 3rd person shooter series. 
 You play the role of a "Specter", basically a secret agent of the galactic government and uncover a conspiracy to wipe out all life in the galaxy. 
 Great action, writing and characters. 
 
-3. Diablo franchise
-
+3. Diablo franchise<br>
 [Diablo](https://en.wikipedia.org/wiki/Diablo_(series)) is a wonderful franchise if you're into gothic themes and slaying demons. 
 It's a "hack and slash" game where you up the mantle of a warrior fighting the evil forces of the demon Diablo. 
 Whether you're using magic or swords or summoning beasts to fight with you, it's great to get in a take down some monsters. 
