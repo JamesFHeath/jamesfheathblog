@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Federalist Papers
+title: Other
 pagination: 
   enabled: true
-  category: federalist
+  category: Other
 ---

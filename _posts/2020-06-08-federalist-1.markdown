@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Federalist Papers 1"
-categories: federalist
+categories: other
 tags: federalist
 ---
 
