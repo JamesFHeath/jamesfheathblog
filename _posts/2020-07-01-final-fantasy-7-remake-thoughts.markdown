@@ -22,4 +22,9 @@ Immediately the game pulled me in, the music hit all the same beats but it was c
 The combat felt visceral and weighty, much closer to God of War than FFXV. 
 I was hooked.
 
-### Getting the Game
+### Getting Hooked
+
+Once I finally received my copy, I played and played for weeks. 
+I went through trying to get every possible secret, do every side quest. 
+It was a fantastic experience from start to finish, a love letter to the original. 
+It really felt like what FF7 would have been if it were made today. 
