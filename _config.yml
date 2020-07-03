@@ -28,6 +28,8 @@ url: "https://www.jamesfheath.com" # the base hostname & protocol for your site,
 github_username:  jamesfheath
 youtube_username: PandaDanceable
 youtube_display_username: SearingFrost
+twitter_username: JamesHe93975989
+twitter_display_username: JamesHeath
 
 # Build settings
 theme: minima
