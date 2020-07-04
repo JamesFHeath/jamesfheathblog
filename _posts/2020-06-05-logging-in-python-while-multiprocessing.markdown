@@ -16,7 +16,7 @@ Print statements can help, but logging gives a much nicer interface and ability 
 ### Naive Logging Approach 
 
 After the debugger VSCode debugger crashed for me, I switched to logging, writing some code like this. 
-(See my [previous post]({% post_url /python/2020-06-05-python-multiprocessing %}) on basic multiprocessing)
+(See my [previous post]({% post_url 2020-06-05-python-multiprocessing %}) on basic multiprocessing)
 {% highlight python %}
 import logging
 import multiprocessing
