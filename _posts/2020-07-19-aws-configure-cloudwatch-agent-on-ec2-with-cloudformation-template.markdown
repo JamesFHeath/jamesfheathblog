@@ -11,8 +11,8 @@ The Cloudwatch Agent can also send other metrics about your instance, but I'm go
 I found that setting it up using Cloudformation templates (CFTs) following the [AWS Guides](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Install-CloudWatch-Agent-New-Instances-CloudFormation.html) was a little complicated and I wanted to boil it down and give a straightforward example. 
 
 ### Creating our Cloudformation Template
-[This CFT]() contains an [AutoScaling Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) for our EC2 instances and a startup script that will automatically install and run our Cloudwatch Agent on EC2 startup using the *userdata* section.
-The Cloudwatch Agent [configuration file](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Agent-Configuration-File-Details.html) will be stored and in and read from S3.
+[This CFT](https://github.com/JamesFHeath/jamesfheathblog_code/blob/master/AWS/CloudwatchAgentEC2Logging.template) contains an [AutoScaling Group](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html) for our EC2 instances and a startup script that will automatically install and run our Cloudwatch Agent on EC2 startup using the *userdata* section.
+The Cloudwatch Agent [configuration file](https://github.com/JamesFHeath/jamesfheathblog_code/blob/master/AWS/CloudWatchAgentConfig.json) will be stored and in and read from S3.
 The configuration will allow us to write logs to a directory on EC2 and have them appear in Cloudwatch. 
 This template is modelled on the [AWS sample template](https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/solutions/AmazonCloudWatchAgent/inline/amazon_linux.template) and uses Amazon Linux. 
 Besides the boilerplate, you just need to configure the S3 Bucket the Cloudwatch config file is in. 
