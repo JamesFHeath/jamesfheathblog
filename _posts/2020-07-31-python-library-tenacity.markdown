@@ -86,6 +86,11 @@ If the custom function returns True, the original function is retried.
 For example, this code retries if the HTTP response is not in the success range of 200 to 299. 
 
 {% highlight python %}
+success_range = range(200, 300)
+
+def is_invalid_code(code):
+    return code not in success_range
+    
 @retry(retry=retry_if_result(is_invalid_code))
 def my_success_http_request():
     print('success')
