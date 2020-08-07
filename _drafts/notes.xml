@@ -1,0 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <store>
+    <inventory>
+        <apples count="5">
+        Golden Delicious
+        </apples>
+        <oranges count="0"/>
+    </inventory>
+ </store>
