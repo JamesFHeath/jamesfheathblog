@@ -52,10 +52,20 @@ print(etree.tostring(store, encoding='utf-8', xml_declaration=True, pretty_print
 {% endhighlight %}
 
 # Searching and Modifying XML objects 
-
 The most effective way to search for XML Elements is with [XPath](https://www.w3schools.com/xml/xpath_intro.asp).
-XPath is fully implemented in **lxml**, 
+XPath is fully implemented in **lxml**, and if you know what tags you are searching for XPath is the way to go.
+Give the XPath expression to the element you wish to search from using that element's [**xpath** method](https://lxml.de/api/lxml.etree._Element-class.html#xpath).
+Note that the xpath method always returns a list of results, even if no elements or only one element is found. 
+
 {% highlight python %}
+xml_string = '<?xml version="1.0" encoding="UTF-8"?><store><inventory>...</store>'
+
+store = etree.fromstring(xml_string)
+
+print(store.xpath('/store'))
+# [<Element store at 0x112bb51c0>]
+print(store.xpath('/store/*'))
+# [<Element inventory at 0x112bb5100>, <Element employees at 0x112bb52c0>]
 {% endhighlight %}
 
 Searching can also be accomplished using iterators to go through elements until you find what you need. 
@@ -106,8 +116,6 @@ print(etree.tostring(store, encoding='utf-8', xml_declaration=True, pretty_print
 # b'<?xml version=\'1.0\' encoding=\'utf-8\'?><store><inventory>...</store>'
 {% endhighlight %}
 
-
-
 # Namespaces
 Finally, we're going to dig into namespaces with a fair amount of detail. 
 [Namespaces](https://www.w3.org/TR/REC-xml-names/#sec-namespaces) are an important part of XML, and **lxml** provides full utility to work with them. 
@@ -123,12 +131,66 @@ Remember, the URI doesn't necessarily have to point to anything real, it just ne
 </root>
 {% endhighlight %}
 
-**lxml** uses *fully qualified* namespaces and not just *prefixes* in order to avoid ambiguity and make code easier to write. 
+**lxml** uses *fully qualified* namespaces on etree elements and not just *prefixes* in order to avoid ambiguity and make code easier to write. 
 When the final XML document is seraialized, it simply translates back into the prefix as expected.  
 
 | lxml QName | Prefix |
 |:-----|:-----|
-| {https://www.jamesfheath.com/xmlnamespaces}searing | searing |
+| {https://www.jamesfheath.com/xmlnamespaces}*tagname* | searing |
+
+**lxml** [stores namespaces in dictionaries](https://lxml.de/tutorial.html#namespaces) in the *nsmap* attribute. 
 
 {% highlight python %}
+namespace_xml_string = '<root xmlns:searing="https://www.jamesfheath.com/xmlnamespace1" xmlns:frost="https://www.jamesfheath.com/xmlnamespace2"><searing:store>store with the searing namespace</searing:store><frost:store>store with the frost namespace</frost:store></root>'
+
+namespace_xml_root = etree.fromstring(namespace_xml_string)
+
+print(namespace_xml_root.nsmap)
+# {'searing': 'https://www.jamesfheath.com/xmlnamespace1',
+#  'frost': 'https://www.jamesfheath.com/xmlnamespace2'}
+
+for e in namespace_xml_root:
+    print(e.tag)
+    print(e.prefix)
+# {https://www.jamesfheath.com/xmlnamespace1}store
+# searing
+# {https://www.jamesfheath.com/xmlnamespace2}store
+# frost
 {% endhighlight %}
+
+To create XML elements with namespaces, you can add the full qualified string as a tag, though this is a lot of typing. 
+
+{% highlight python %}
+nsmap = {'searing': 'https://www.jamesfheath.com/xmlnamespace1', 'frost': 'https://www.jamesfheath.com/xmlnamespace2'}
+
+root = etree.Element('root', nsmap=nsmap)
+searing_store = etree.SubElement(root, '{https://www.jamesfheath.com/xmlnamespace1}store')
+frost_store = etree.SubElement(root, '{https://www.jamesfheath.com/xmlnamespace2}store')
+
+print(etree.tostring(root, pretty_print=True))
+# <root xmlns:searing="https://www.jamesfheath.com/xmlnamespace1" xmlns:frost="https://www.jamesfheath.com/xmlnamespace2">
+#    <searing:store/>
+#    <frost:store/>
+# </root>
+{% endhighlight %}
+
+Using [**etree.QName**](https://lxml.de/api/lxml.etree.QName-class.html) constructors, it's easy to build qualified names using your namespace map. 
+
+{% highlight python %}
+nsmap = {'searing': 'https://www.jamesfheath.com/xmlnamespace1', 'frost': 'https://www.jamesfheath.com/xmlnamespace2'}
+
+root = etree.Element('root', nsmap=nsmap)
+searing_store = etree.SubElement(root, etree.QName(nsmap['searing'], 'store'))
+frost_store = etree.SubElement(root, etree.QName(nsmap['frost'], 'store'))
+
+print(etree.tostring(root, pretty_print=True))
+# <root xmlns:searing="https://www.jamesfheath.com/xmlnamespace1" xmlns:frost="https://www.jamesfheath.com/xmlnamespace2">
+#    <searing:store/>
+#    <frost:store/>
+# </root>
+
+{% endhighlight %}
+
+# Conclusion
+XML is a complicated topic, and there are a lot of details with stylesheets that need to be accounted for when working with complex elements. 
+**lxml** will give you the tools to operate on XML, and we've gone over most of the tools you will need for 90% of you XML work. 
