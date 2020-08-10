@@ -5,3 +5,4 @@ _site
 vendor
 _latex_drafts
 __pycache__
+node_modules
