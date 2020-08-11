@@ -22,7 +22,8 @@ title: James Heath's Blog
 author: James Heath
 email: jamesheathradford@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Blog
+  James Heath Blog about Programming, specifically Python. 
+  Also many other random topics in math and programming. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.jamesfheath.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jamesfheath
