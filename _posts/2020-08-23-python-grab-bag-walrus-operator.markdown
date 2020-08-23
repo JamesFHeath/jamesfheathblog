@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Python Topics: Walrus Operator"
+title:  "Python Grab Bag: Walrus Operator"
 categories: python programming
 tags: python walrus operator assignment expression
 ---
